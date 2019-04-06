@@ -19,28 +19,30 @@ https://drive.google.com/drive/u/0/folders/1Rp3Cr6coisUI_wOScPdDnwD0Ll2HE1r7
 Id from above is 1Rp3Cr6coisUI_wOScPdDnwD0Ll2HE1r7
 
 # Step 2
-Now create backup.sh in your server
+Now in your server create backup.sh with same code as available in my repository 
 
 # step 3
 
 create a cronjob as root  using below steps
-  step1:
-  Edit crontab file
+  1.Edit crontab file
+  
    # sudo nano /etc/crontab
-  Add the below your script in crontab
+   
+  2.Add the below line  in crontab file
   
-  0 9  * * * /your/path/to/backup.sh Backup_Folder DatabaseName DatabaseUser DatabasePassword GdriveFolderId 
+  0 9  * * * root /your/path/to/backup.sh Backup_Folder DatabaseName DatabaseUser DatabasePassword GdriveFolderId 
   
-  we should pass parameters to script
-  Backup_Folder ===> This is the folder name to which your mysql file dump into server
-  DatabaseName  ===> Provide  database name which you should backup
-  DatabaseUser  ===> Provide username of your mysql, mostly root is the username
-  DatabasePassword ===>Provide database password
-  GdriveFolderId   ===> Put your google drive folder which you noted down above
-  Every morning at 9 AM the backup should take place automatically
+  # Explanation of above line:                                                                                                            
+  we should pass 5 parameters to script                                                                                                    
+  Backup_Folder ===> This is the folder name to which your mysql file dump into server,                                                  
+  DatabaseName  ===> Provide  database name which you should backup,                                                                      
+  DatabaseUser  ===> Provide username of your mysql, mostly root is the username ,                                                             
+  DatabasePassword ===>Provide database password,                                                                                         
+  GdriveFolderId   ===> Put your google drive folder which you noted down above                                                           
+  Every morning at 9 AM the backup should take place automatically                                                          
   
-  For example, In  my case the cronjob should be,
-  0 9  * * * /backup.sh MysqlBackup Blog_Database root pass1234 1Rp3Cr6coisUI_wOScPdDnwD0Ll2HE1r7  
+  For example, In  my case the cronjob should be,                                                                                        
+  0 9  * * * root /backup.sh MysqlBackup Blog_Database root pass1234 1Rp3Cr6coisUI_wOScPdDnwD0Ll2HE1r7  
   
   
   
