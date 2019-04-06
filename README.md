@@ -23,10 +23,10 @@ Now in your server create backup.sh with same code as available in my repository
 
 # step 3
 
-create a cronjob as root  using below steps
-  1.Edit crontab file
+create a cronjob as root  using below steps                                                                                              
+  1.Edit crontab file by using below command
   
-   # sudo nano /etc/crontab
+    sudo nano /etc/crontab
    
   2.Add the below line  in crontab file
   
