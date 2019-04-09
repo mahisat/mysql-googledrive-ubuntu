@@ -30,7 +30,7 @@ else
     sleep 10
     ##upload it to google drive
     gdrive upload -r "./$dirname/$database($(date +\%Y-\%m-\%d-\%H)).sql.gz" -p $gdrivefolderid
-    ##delete 10 days older file on server to save memory(this coomand is optional)
+    ##delete 10 days older file on server to save disk space(this command is optional)
     find ./$dirname -mtime +10 -type f -delete
 
 fi
