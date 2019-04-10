@@ -9,8 +9,7 @@ Bash Script to backup mysql and upload it to Google Drive. Tested with Ubuntu 14
  # Step 1
 
 Go to this link then  follow the Steps To Install Gdrive on Server:
-https://medium.com/auto-backup-mysql-to-google-drive/auto-backup-mysql-to-google-drive-c8b2178b097e
-
+https://medium.com/@sathishmecece/auto-backup-mysql-database-from-ubuntu-server-to-google-drive-using-shell-script-3204d672ffb9
 After configuring gdrive on server, Create folder in your google drive account then move into that folder. Look at URL note down the id
 
 For example,
